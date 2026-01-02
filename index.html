@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajer Keuangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Manajer Keuangan</h1>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="summary">
+                <div>
+                    <h2>Pemasukan</h2>
+                    <p id="total-income">Rp 0</p>
+                </div>
+                <div>
+                    <h2>Pengeluaran</h2>
+                    <p id="total-expense">Rp 0</p>
+                </div>
+                <div>
+                    <h2>Saldo</h2>
+                    <p id="balance">Rp 0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="transaction-form">
+            <h2>Tambah Transaksi Baru</h2>
+            <form id="add-transaction-form">
+                <div>
+                    <label for="description">Deskripsi</label>
+                    <input type="text" id="description" placeholder="Makan siang" required>
+                </div>
+                <div>
+                    <label for="amount">Jumlah</label>
+                    <input type="number" id="amount" placeholder="25000" required>
+                </div>
+                <div>
+                    <label for="type">Tipe</label>
+                    <select id="type">
+                        <option value="income">Pemasukan</option>
+                        <option value="expense">Pengeluaran</option>
+                    </select>
+                </div>
+                <button type="submit">Tambah</button>
+            </form>
+        </section>
+
+        <section class="transaction-list">
+            <h2>Riwayat Transaksi</h2>
+            <ul id="transactions">
+                <!-- Transactions will be added here by JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
